@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,5 +19,9 @@ class Patient extends Model
     public function visits()
     {
         return $this->hasMany(Visit::class);
+    }
+
+    public function getAgeAttribute() {
+        return Carbon::parse($this->date_of_birth)->age;
     }
 }

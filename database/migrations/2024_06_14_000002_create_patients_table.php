@@ -13,6 +13,8 @@ class CreatePatientsTable extends Migration
             $table->string('name');
             $table->date('date_of_birth');
             $table->foreignId('diagnosis_id')->nullable()->constrained('diagnosis')->onDelete('set null');
+            $table->string('parent_name');
+            $table->string('parent_email');
             $table->timestamps();
         });
     }

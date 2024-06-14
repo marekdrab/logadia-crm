@@ -22,6 +22,8 @@ class PatientFactory extends Factory
             'name' => $this->faker->name,
             'date_of_birth' => $this->faker->date(),
             'diagnosis_id' => $this->faker->randomElement($diagnosisIds),
+            'parent_name' => $this->faker->name,
+            'parent_email' => $this->faker->email,
         ];
     }
 }

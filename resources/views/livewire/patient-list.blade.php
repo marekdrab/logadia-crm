@@ -16,6 +16,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Age</th>
                                 <th>Date of Birth</th>
                                 <th>Diagnosis</th>
                                 <th>Action</th>
@@ -26,6 +27,7 @@
                                 <tr>
                                     <td>{{ $patient->id }}</td>
                                     <td>{{ $patient->name }}</td>
+                                    <td>{{ $patient->age }}</td>
                                     <td>{{ $patient->date_of_birth }}</td>
                                     <td>{{ $patient->diagnosis->name }}</td>
                                     <td>
@@ -35,6 +37,9 @@
                             @endforeach
                             </tbody>
                         </table>
+                        <div class="mt-4">
+                            {{ $patients->links() }}
+                        </div>
                     </div>
 
                 </div>
