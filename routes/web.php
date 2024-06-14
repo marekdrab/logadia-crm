@@ -3,8 +3,6 @@
 use App\Livewire\Pages\Materials;
 use App\Livewire\Pages\Patients;
 
-use App\Livewire\PatientList;
-
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
