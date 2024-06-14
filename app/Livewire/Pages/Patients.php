@@ -8,6 +8,6 @@ class Patients extends Component
 {
     public function render()
     {
-        return view('livewire.pages.patients');
+        return view('livewire.patients');
     }
 }
