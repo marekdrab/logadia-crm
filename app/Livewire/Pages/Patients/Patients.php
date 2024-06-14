@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Pages\Patients;
 
 use App\Models\Patient;
 use Livewire\Component;
 
-class PatientList extends Component
+class Patients extends Component
 {
     public $patients;
 

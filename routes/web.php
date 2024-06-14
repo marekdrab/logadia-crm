@@ -1,8 +1,8 @@
 <?php
 
 use App\Livewire\Pages\Materials;
-use App\Livewire\Pages\Patients;
-
+use App\Livewire\Pages\Patients\PatientDetail;
+use App\Livewire\Pages\Patients\Patients;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
@@ -15,10 +15,9 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-
-
 Route::get('/patients', Patients::class)->middleware(['auth', 'verified'])->name('patients.index');
 Route::get('/materials', Materials::class)->middleware(['auth', 'verified'])->name('materials.index');
+Route::get('/patients/{patientId}', PatientDetail::class)->name('patients.show');
 
 
 require __DIR__.'/auth.php';
