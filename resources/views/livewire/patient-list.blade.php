@@ -10,7 +10,12 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div>
                         <h1>Patients List</h1>
-                        {{--    <a href="{{ route('patients.create') }}">Create Patient</a>--}}
+                        <input
+                            type="text"
+                            class="mt-2 mb-4 p-2 border border-gray-300 rounded"
+                            placeholder="Search by name"
+                            wire:model.live="search"
+                        >
                         <table>
                             <thead>
                             <tr>
