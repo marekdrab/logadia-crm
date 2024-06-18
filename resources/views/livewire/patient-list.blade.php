@@ -10,12 +10,29 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div>
                         <h1>Patients List</h1>
-                        <input
-                            type="text"
-                            class="mt-2 mb-4 p-2 border border-gray-300 rounded"
-                            placeholder="Search by name"
-                            wire:model.live="search"
-                        >
+                        <div class="mb-4">
+                            <input
+                                type="text"
+                                class="mt-2 mb-2 p-2 border border-gray-300 rounded"
+                                placeholder="Search by name"
+                                wire:model.live="search"
+                            >
+                            <input
+                                type="number"
+                                class="mt-2 mb-2 p-2 border border-gray-300 rounded"
+                                placeholder="Filter by age"
+                                wire:model.live="age"
+                            >
+                            <select
+                                class="mt-2 mb-2 p-2 border border-gray-300 rounded"
+                                wire:model.live="diagnosis"
+                            >
+                                <option value="">Filter by diagnosis</option>
+                                @foreach ($diagnoses as $diagnosis)
+                                    <option value="{{ $diagnosis->id }}">{{ $diagnosis->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <table>
                             <thead>
                             <tr>
