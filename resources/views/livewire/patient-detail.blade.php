@@ -24,6 +24,16 @@
 
                 </div>
             </div>
+
+            <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <div>
+                        <h1>Patient Sedenia</h1>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
