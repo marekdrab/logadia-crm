@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
 {
-    use HasFactory;
+    protected $fillable = ['title', 'file_path', 'category_id'];
 
-    protected $fillable = ['visit_id', 'file_path'];
-
-    public function visit()
+    public function category()
     {
-        return $this->belongsTo(Visit::class);
+        return $this->belongsTo(Category::class);
     }
 }

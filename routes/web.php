@@ -21,7 +21,5 @@ Route::get('/patients/{patientId}', PatientDetail::class)->middleware(['auth', '
 
 Route::get('/categories', Categories::class)->middleware(['auth', 'verified'])->name('categories.index');
 Route::get('/materials', Materials::class)->middleware(['auth', 'verified'])->name('materials.index');
-Route::get('/patients/{patientId}', PatientDetail::class)->name('patients.show');
-
 
 require __DIR__.'/auth.php';
